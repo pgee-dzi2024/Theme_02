@@ -8,7 +8,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('booking', views.booking, name='book_now'),
-    path('restaurant', views.restaurant, name='restaurant'),
+    path('restaurant/<int:pk>/', views.restaurant, name='rest'),
 ]
 
 if settings.DEBUG:

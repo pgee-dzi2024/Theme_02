@@ -64,7 +64,7 @@
                         {% endif %}
                     {% endfor %}
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Резервирай сега</a>
+                    <a href="{% url 'book_now' %}" class="btn btn-primary py-2 px-4">Резервирай сега</a>
                 </div>
             </nav>
 
@@ -79,11 +79,10 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-4 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Проверка</h4>
-                        <a class="btn btn-link" href="">Начало</a>
-                        <a class="btn btn-link" href="">За нас</a>
-                        <a class="btn btn-link" href="">Контакти</a>
-                        <a class="btn btn-link" href="">Резервации</a>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Страници</h4>
+                    {% for item in menu %}
+                        <a href="{% url item.url_name %}" class="btn btn-link">{{item.title}}</a>
+                    {% endfor %}
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Контакт</h4>
