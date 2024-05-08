@@ -105,7 +105,7 @@ class Appointment(models.Model):
     ap_hour = models.ForeignKey(BookHour,verbose_name='Час', on_delete=models.CASCADE)
     ap_rest = models.ForeignKey(Restaurant,verbose_name='Ресторант', default=2, on_delete=models.CASCADE)
     ap_type = models.PositiveSmallIntegerField(verbose_name='Тип', choices=RESERVATION_TYPE, default=DINNER, help_text='тип на резервацията')
-    ap_places = models.IntegerField('Брой хора', default=0, help_text='брой резержирани места')
+    ap_places = models.IntegerField('Брой хора', default=0, help_text='брой резервирани места')
     ap_name = models.CharField('Име', max_length=60)
     ap_phone = models.CharField('Телефон', max_length=14, default='')
     ap_email = models.CharField('e-mail', max_length=50, default='')
